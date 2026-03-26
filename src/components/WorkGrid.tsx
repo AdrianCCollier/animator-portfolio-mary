@@ -18,9 +18,9 @@ function categoryClass(cat: Category) {
 
 function PlayIcon() {
   return (
-    <div className="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center shadow-lg">
+    <div className="w-14 h-14 rounded-full bg-[rgba(8,12,20,0.85)] border border-[rgba(0,212,255,0.5)] flex items-center justify-center shadow-lg" style={{ boxShadow: '0 0 16px rgba(0,212,255,0.25)' }}>
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-        <path d="M8 5.14v14l11-7-11-7z" fill="#b8621a" />
+        <path d="M8 5.14v14l11-7-11-7z" fill="#00d4ff" />
       </svg>
     </div>
   )
@@ -53,8 +53,8 @@ function ProjectCard({ project, index }: CardProps) {
             />
           ) : null}
           {/* Placeholder when no image */}
-          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-neutral-100 to-neutral-200">
-            <span className="font-display text-4xl text-neutral-300 italic select-none">
+          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[var(--bg-alt)] to-[var(--bg)]">
+            <span className="font-display text-4xl text-[var(--border)] select-none">
               {project.title[0]}
             </span>
           </div>

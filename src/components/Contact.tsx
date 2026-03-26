@@ -50,9 +50,9 @@ export function Contact() {
   }
 
   const inputClass = (field: keyof FormData) =>
-    `w-full px-4 py-3 text-sm bg-white border rounded text-[var(--text-primary)] placeholder-[var(--text-muted)] transition-all duration-200 ${
+    `w-full px-4 py-3 text-sm bg-[var(--bg-alt)] border rounded text-[var(--text-primary)] placeholder-[var(--text-muted)] transition-all duration-200 ${
       errors[field]
-        ? 'border-red-300 focus:border-red-400'
+        ? 'border-[rgba(255,45,107,0.6)] focus:border-[#ff2d6b]'
         : 'border-[var(--border)] focus:border-[var(--accent-light)]'
     }`
 
@@ -129,8 +129,8 @@ export function Contact() {
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             {sent ? (
-              <div className="p-6 rounded-xl border border-green-200 bg-green-50 text-center">
-                <div className="text-2xl mb-3">✓</div>
+              <div className="p-6 rounded-xl border border-[rgba(0,212,255,0.3)] bg-[rgba(0,212,255,0.06)] text-center">
+                <div className="text-2xl mb-3 text-[var(--accent)]">✓</div>
                 <p className="font-display text-lg font-medium text-[var(--text-primary)] mb-1">Message sent!</p>
                 <p className="text-sm text-[var(--text-secondary)]">
                   Your email client should have opened with the message pre-filled. If not,
@@ -158,7 +158,7 @@ export function Contact() {
                       className={inputClass(field)}
                     />
                     {errors[field] && (
-                      <p className="mt-1 text-xs text-red-500">{errors[field]}</p>
+                      <p className="mt-1 text-xs text-[#ff2d6b]">{errors[field]}</p>
                     )}
                   </div>
                 ))}
@@ -174,12 +174,12 @@ export function Contact() {
                     className={`${inputClass('message')} resize-none`}
                   />
                   {errors.message && (
-                    <p className="mt-1 text-xs text-red-500">{errors.message}</p>
+                    <p className="mt-1 text-xs text-[#ff2d6b]">{errors.message}</p>
                   )}
                 </div>
                 <button
                   type="submit"
-                  className="w-full py-3 bg-[var(--accent)] text-white text-sm rounded hover:bg-[var(--accent-light)] transition-colors"
+                  className="btn-neon w-full py-3 bg-[var(--accent)] text-[var(--bg)] text-sm font-semibold rounded hover:bg-[var(--accent-light)] transition-colors"
                 >
                   Send Message
                 </button>

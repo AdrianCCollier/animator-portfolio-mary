@@ -7,7 +7,7 @@ function VimeoEmbed({ id, caption }: { id: string; caption: string }) {
     <figure>
       <div className="vimeo-wrapper">
         <iframe
-          src={`https://player.vimeo.com/video/${id}?title=0&byline=0&portrait=0&color=b8621a`}
+          src={`https://player.vimeo.com/video/${id}?title=0&byline=0&portrait=0&color=00d4ff`}
           allow="autoplay; fullscreen; picture-in-picture"
           allowFullScreen
           title={caption}
@@ -129,7 +129,7 @@ export function ProjectBreakdown() {
             <p className="section-label mb-4">Final Piece</p>
             <div className="vimeo-wrapper shadow-xl">
               <iframe
-                src={`https://player.vimeo.com/video/${project.vimeoId}?title=0&byline=0&portrait=0&color=b8621a`}
+                src={`https://player.vimeo.com/video/${project.vimeoId}?title=0&byline=0&portrait=0&color=00d4ff`}
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowFullScreen
                 title={project.title}

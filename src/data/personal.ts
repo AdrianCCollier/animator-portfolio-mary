@@ -24,5 +24,12 @@ export const personal = {
     artstation: '', // TODO: add ArtStation URL
     email: 'mailto:mary@marymarquez.art', // TODO: replace with real email
   },
-  reelVimeoId: '', // TODO: add Vimeo video ID (the number from the URL)
+  reel: {
+    vimeoId: '',   // TODO: paste the Vimeo video ID (just the number, e.g. '123456789')
+    title: 'Demo Reel 2026',
+    year: '2026',
+    duration: '2:34',
+    description: 'Character · VFX · Real-time · Arch Viz',
+    software: ['Maya', 'Houdini', 'Unreal Engine 5', 'Nuke'],
+  },
 }
